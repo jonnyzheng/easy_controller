@@ -1,6 +1,6 @@
 # EasyController
 
-EasyController is a contrller plugin which help you write less code in common controllers
+EasyController is a controller plugin which help you write less code in common controllers
 
 
 ## Installation
