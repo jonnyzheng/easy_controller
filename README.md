@@ -21,13 +21,52 @@ Or install it yourself as:
 
 ## Usage
 
-```ruby
+### Before use easy_controller we have to write controller code like this:
 
+```ruby
 class UsersController < ApplicationController
 
-  easy_controller model: :user, permit: [:name,:email]
+  before_action :find_user, only: [:show, :edit, :update, :destroy]
+
+  def show
+  
+  end
+
+  def create
+    @user = User.create(user_params)
+  end
+
+
+  protected
+  
+  def find_user
+    @user = User.find(params[:id])
+  end
+  
+   def user_params
+    params.require(:user).permit(:name, :email)
+  end
 
 end
 
 ```
 
+### Use easy_controller we can write code with less work:
+
+```ruby
+class UsersController < ApplicationController
+
+  easy_controller model: :user, permit: [:name,:email]
+
+  def show
+  
+  end
+
+  def create
+    user = User.create(user_params)
+  end
+
+end
+```
+
+The `easy_controller` method would automatically generate `find_user`, `user_params` functions, and invoke  `before_action :find_user, only: [:show, :edit, :update, :destroy]` in the controller
