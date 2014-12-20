@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = "0.1.0"
   spec.authors       = ["jonny"]
   spec.email         = ["mars131@gmail.com"]
-  spec.summary       = %q{EasyController is a contrller plugin which help you write less code in common controllers}
+  spec.summary       = %q{EasyController is a controller plugin which help you write less code in common controllers}
   spec.description   = %q{}
   spec.homepage      = "https://github.com/jonnyzheng/easy_controller"
   spec.license       = "MIT"
