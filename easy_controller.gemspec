@@ -5,12 +5,12 @@ require 'easy_controller/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "easy_controller"
-  spec.version       = EasyController::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["jonny"]
   spec.email         = ["mars131@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{EasyController is a contrller plugin which help you write less code in common controllers}
+  spec.description   = %q{}
+  spec.homepage      = "https://github.com/jonnyzheng/easy_controller"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
